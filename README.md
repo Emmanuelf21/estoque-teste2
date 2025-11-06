@@ -98,27 +98,21 @@ values('cliente1@teste.com', '11912345678', 'Jorge'),
 ('cliente2@teste.com', '11987654321', 'Patrício'),
 ('cliente3@teste.com', '11911223344', 'Ana Carolina');
 
-INSERT INTO produto (nome, preco_unit, quantidade, qtd_minima, qtd_maxima)
-VALUES
-('Teclado Mecânico Redragon', 349.90, 15, 5, 50),
-('Mouse Logitech G203', 249.90, 45, 10, 100),
-('Monitor Gamer AOC 27"', 1999.00, 13, 5, 30),
-('Cabo HDMI 2.0 2m', 99.90, 20, 10, 100),
-('Headset HyperX Cloud Stinger', 499.00, 9, 5, 40);
+INSERT INTO produtos (
+    id_produto, nome, preco_unit, quantidade, qtd_minima, qtd_maxima,
+    tensao, dimensoes, resolucao, armazenamento, conectividade, tipo_produto
+) VALUES
+(1, 'Smartphone Galaxy S24', 4999.90, 60, 10, 100, 'Bivolt', 6.8, '3200x1440', '256GB', 'Wi-Fi, 5G, Bluetooth', 'smartphone'),
+(11, 'Smart TV LG OLED 55', 6999.00, 23, 5, 40, '110/220v', 55, '3840x2160 (4K)', NULL, 'Wi-Fi, HDMI, Bluetooth', 'smart TV'),
+(12, 'poco x7', 300.00, 3, 10, 30, '110/220v', 6.5, '1920x1080', '512GB', 'Wi-Fi, HDMI, Bluetooth', 'smartphone'),
+(2, 'Notebook Dell XPS 13', 8999.00, 25, 5, 60, 'Bivolt', 13.3, '1920x1080', '512GB SSD', 'Wi-Fi, Bluetooth', 'notebook');
 
-INSERT INTO historico (fk_produto, tipo_movimentacao, qtd_movimentada, custo_total, fk_usuario, data_movimentacao)
-VALUES
--- Entradas (compras ou reposições de estoque)
-(1, 'entrada', 20, 6998.00, 2, '2025-11-01'),  -- Teclado Mecânico
-(2, 'entrada', 50, 12495.00, 2, '2025-11-02'), -- Mouse Logitech
-(3, 'entrada', 15, 29985.00, 2, '2025-11-02'), -- Monitor Gamer
-(4, 'entrada', 30, 2997.00, 2, '2025-11-03'),  -- Cabo HDMI
-(5, 'entrada', 10, 4990.00, 2, '2025-11-03'),  -- Headset
 
--- Saídas (vendas para clientes)
-(1, 'saida', 3, 1049.70, 1, '2025-11-03'),  -- venda de teclados
-(2, 'saida', 5, 1249.50, 1, '2025-11-03'),  -- venda de mouses
-(3, 'saida', 2, 3998.00, 3, '2025-11-03'),  -- venda de monitores
-(4, 'saida', 10, 999.00, 1, '2025-11-03'),  -- venda de cabos
-(5, 'saida', 1, 499.00, 3, '2025-11-03');   -- venda de headset
+INSERT INTO historico (
+    id_historico, fk_produto, tipo_movimentacao, qtd_movimentada, custo_total, fk_usuario, data_movimentacao
+) VALUES
+(1, 1, 'entrada', 10, 49999.00, 1, '2025-11-06'),
+(2, 2, 'saida', 5, 44995.00, 1, '2025-11-06'),
+(3, 11, 'entrada', 3, 20997.00, 1, '2025-11-06');
+
 ```
