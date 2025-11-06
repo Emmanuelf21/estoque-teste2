@@ -101,7 +101,7 @@ const Estoque = () => {
             tensao: p.tensao,
             dimensoes: p.dimensoes,
             resolucao: p.resolucao,
-            armazenamento: p.armazenamento,
+            armazenamento: p.armazenamento || null,
             conectividade: p.conectividade
         })
         setEditId(p.id)

@@ -198,7 +198,7 @@ def atualizar_produto(id_produto):
                 dimensoes = %s,
                 resolucao = %s,
                 armazenamento = %s,
-                conectividade = %s,
+                conectividade = %s
             WHERE id_produto = %s
         """, (nome, preco, qtd, qtd_min, qtd_max, tipo_prod, tensao, dimensoes, resolucao, armazenamento, conectividade, id_produto))
 
