@@ -64,7 +64,13 @@ CREATE TABLE produto (
     preco_unit DECIMAL(10,2) NOT NULL,
     quantidade NUMERIC NOT NULL,
     qtd_minima NUMERIC NOT NULL,
-    qtd_maxima NUMERIC NOT NULL
+    qtd_maxima NUMERIC NOT NULL,
+	tipo_produto VARCHAR(100) not null,
+	tensao VARCHAR(50) NOT NULL,
+	dimensoes NUMERIC NOT NULL,
+	resolucao VARCHAR(100) NOT NULL,
+	armazenamento VARCHAR(50),
+	conectividade VARCHAR (100)
 );
 ```
 
