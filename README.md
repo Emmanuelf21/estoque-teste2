@@ -98,7 +98,7 @@ values('cliente1@teste.com', '11912345678', 'Jorge'),
 ('cliente2@teste.com', '11987654321', 'Patrício'),
 ('cliente3@teste.com', '11911223344', 'Ana Carolina');
 
-INSERT INTO produtos (
+INSERT INTO produto (
     id_produto, nome, preco_unit, quantidade, qtd_minima, qtd_maxima,
     tensao, dimensoes, resolucao, armazenamento, conectividade, tipo_produto
 ) VALUES
