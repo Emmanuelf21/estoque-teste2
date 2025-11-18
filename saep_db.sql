@@ -1,3 +1,18 @@
+-- Database: saep_db
+
+-- DROP DATABASE IF EXISTS saep_db;
+
+CREATE DATABASE saep_db
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
 CREATE TABLE login (
     id_login SERIAL PRIMARY KEY,
     email VARCHAR(100) NOT NULL,
@@ -62,3 +77,4 @@ INSERT INTO historico (
 (1, 1, 'entrada', 10, 49999.00, 1, '2025-11-06'),
 (2, 2, 'saida', 5, 44995.00, 1, '2025-11-06'),
 (3, 11, 'entrada', 3, 20997.00, 1, '2025-11-06');
+
